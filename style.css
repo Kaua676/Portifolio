@@ -3,24 +3,70 @@
 *{
     padding: 0;
     margin: 0;
-}
-
-:root{
-    --color-white: #fff;
-    --color-pink: #d12f7e;
+    box-sizing: border-box;
 }
 
 html{
     scroll-behavior: smooth;
     font-size: 10px;
-    box-sizing: border-box;
 }
 
 body{
     font-family: "Poppins", sans-serif;
 }
 
-/*/////////////////////////////Primeira Pagina/////////////////////////////*/
+/*/////////////////////////////Header/////////////////////////////*/
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 30px;
+    position: fixed;
+    background: 'transparent';
+    transition: all .3s ease-out;
+    z-index: 2;
+}
+
+.header-title {
+    text-decoration: none;
+}
+
+.header-title h1 {
+    color: #fff;
+    font-size: 2rem;
+    transition: opacity .3s ease;
+}
+
+.header-title h1:hover {
+    opacity: .8;
+}
+
+.navbar {
+    max-width: 350px;
+    width: 100%;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+  
+.navbar-links li {
+    list-style: none;
+    transition: all .2s ease-in-out;
+}
+  
+.navbar-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/*/////////////////////////////Pagina Home/////////////////////////////*/
 
 #person{
     height: 100vh;
@@ -124,9 +170,7 @@ body{
     opacity: .7;
     z-index: -1;
     background:
-    linear-gradient(90deg, transparent 30%, #032030),
-    linear-gradient(180deg, transparent 30%, #032030),
-    linear-gradient(0deg, transparent 65%, #032030);
+    linear-gradient(90deg, transparent 30%, #032030), linear-gradient(180deg, transparent 30%, #032030), linear-gradient(270deg, transparent 30%, #032030);
 }
 
 .wrapper-profile-photo{
@@ -158,7 +202,7 @@ body{
     filter: brightness(1);
 }
 
-/*/////////////////////////////Segunda Pagina/////////////////////////////*/
+/*/////////////////////////////Pagina Sobre/////////////////////////////*/
 
 #about{
     height: 100vh;
@@ -190,7 +234,7 @@ body{
     height: 100%;
     width: 100%;
     background:
-    linear-gradient(.25turn, transparent 30%, #032030);
+    linear-gradient(.25turn, transparent 80%, #032030), linear-gradient(0.5turn, transparent 30%, rgb(3, 32, 48)), linear-gradient(0turn, transparent 30%, #032030);
 }
 
 .img-wrapper img{
@@ -254,26 +298,30 @@ body{
     margin: 4rem 3rem;
 }
 
-.button-cta button{
+.button-cta a{
     display: inline-block;
     width: 100%;
     max-width: 172px;
     padding: 10px;
     margin-bottom: 3rem;
     font-family: 'Poppins';
-    font-size: bold;
+    font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: .15rem;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
     border-radius: 10px;
     cursor: pointer;
 }
 
-.button-cta button:hover{
+.button-cta a:hover{
     transition: all .3s ease;
     filter: brightness(.8);
 }
 
-/*/////////////////////////////Terceira Pagina/////////////////////////////*/
+/*/////////////////////////////Pagina Projetos/////////////////////////////*/
 
 #projects{
     height: 90vh;
@@ -292,7 +340,6 @@ body{
     color: #fff;
     display: flex;
     justify-content: center;
-
 }
 
 .wrapper-projects{
@@ -400,7 +447,7 @@ body{
     opacity: .7;
 }
 
-/*/////////////////////////////Quarta Pagina/////////////////////////////*/
+/*/////////////////////////////Pagina Contato/////////////////////////////*/
 
 #contacts{
     height: 100vh;
@@ -494,11 +541,27 @@ form button:hover{
     height: 100%;
     width: 100%;
     background:
-    linear-gradient(0.75turn, transparent 30%, #032030);
+    linear-gradient(0.75turn, transparent 30%, #032030), linear-gradient(0turn, transparent 30%, #032030), linear-gradient(0.5turn, transparent 30%, #032030);;
 }
 
 .img-contact-wrapper img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+/*/////////////////////////////Footer/////////////////////////////*/
+
+#footer{
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    background: #032030;
+}
+
+.container-footer h3{
+    color: #fff;
 }
